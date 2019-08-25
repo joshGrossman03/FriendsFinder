@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FriendsFinder Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                <div id="results-modal" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Survey Questions</h4>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Name(Required)</label>
+                        <input type="text" class="form-control" id="userName" placeholder="John/Jane Doughnut">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Link to Photo Image (Required)</label>
+                        <input type="text" class="form-control" id="photoURL" placeholder="http://path/image.jpg">
+                    </div>
+                    <hr>
+                    <h3>Question 1</h3>
+                    <h4>You would listen if Your friend wants to tell you about the dream they had last night even
+                        when you know it's probably going to be boring and long.</h4>
+                    <select id="question1" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option type="number" value="1">1(Stronly Disagree)</option>
+                        <option type="number"value="2">2</option>
+                        <option type="number"value="3">3</option>
+                        <option type="number"value="4">4</option>
+                        <option type="number"value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 2</h3>
+                    <h4>It's your friend's birthday. You would happily rub a delicious egg custard all over your body
+                        were
+                        it their only birthday wish.</h4>
+                    <select id="question2" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 3</h3>
+                    <h4>You would punch yourself in the face if your friend's potential new boss had one very specific
+                        demand, that you punch yourself in the face, in order for your friend to get the new job. </h4>
+                    <select id="question3" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 4</h3>
+                    <h4>You would sit in a room alone for an hour with Shia LaBeouf if it was the only way you could get
+                        the medicine
+                        to bring to your friend who is sick.</h4>
+                    <select id="question4" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 5</h3>
+                    <h4>You have plans to hang out, but your friend is being guarded by a large angry goose. The only
+                        way to get to your
+                        friend is to go through the goose. You choose to fight the goose to hang out with your friend.
+                    </h4>
+                    <select id="question5" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 6</h3>
+                    <h4>You would lend your friend money to buy 11 gallons of spicy nacho cheese if they lost their
+                        wallet and need you
+                        to buy it.</h4>
+                    <select id="question6" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 7</h3>
+                    <h4>Your friend has been captured by a malicious sea witch. You would wrangle those slippery,
+                        ill-tempered sea otters that
+                        guard the sea dungeon if it were the only way to save them.</h4>
+                    <select id="question7" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 8</h3>
+                    <h4>Your friend turns out to be a creature that can only survive by feasting on the souls of the
+                        innocent.
+                        You help your friend find victims to stay alive.</h4>
+                    <select id="question8" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option type="number" value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 9</h3>
+                    <h4>Your plan for a perfect sunday is to sleep @ home all day.</h4>
+                    <select id="question9" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <h3>Question 10</h3>
+                    <h4>You favorite season of the year is Winter.</h4>
+                    <select id="question10" class="custom-select">
+                        <option selected>Make a Selection</option>
+                        <option value="1">1(Stronly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5(Strongly Agree)</option>
+                    </select>
+                    <hr>
+                    <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4">
+                        <a id="submitQuiz" href="#" class="btn btn-primary btn-lg active" role="button"
+                            aria-pressed="true">Submit Your Answers</a>
+                        <a href="/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(document).ready();
+        $("#exampleModal").hide();
+
+        let remaining = 0;
+
+        $("#submitQuiz").on("click", (event) => {
+            event.preventDefault();
+            // Here we grab the form elements
+            let q1 = parseInt($("#question1").val());
+            let q2 = parseInt($("#question2").val());
+            let q3 = parseInt($("#question3").val());
+            let q4 = parseInt($("#question4").val());
+            let q5 = parseInt($("#question5").val());
+            let q6 = parseInt($("#question6").val());
+            let q7 = parseInt($("#question7").val());
+            let q8 = parseInt($("#question8").val());
+            let q9 = parseInt($("#question9").val());
+            let q10 = parseInt($("#question10").val());
+           
+            let newFriend = {
+                Name: $("#userName").val().trim(),
+                photo: $("#photoURL").val().trim(),
+                scores: [
+                     q1,q2,q3,q4,q5,q6,q7,q8,q9,q10
+                ]
+            };
+            console.log(newFriend.scores);
+
+            for (let i = 0; i < newFriend.scores.length; i++) {
+                if (newFriend.scores[i] == "Make a Selection") {
+                    remaining++;
+                };
+            };
+
+            if (remaining > 0) {
+                alert(`You left ${remaining} of the survey questions unanswered. Please complete all of the survey questions before subitting.`);
+                remaining = 0;
+            }
+
+            else {
+                $.post("/api/friends", newFriend, (data) => {
+                    console.log(newFriend);
+                    if (data) {
+                        console.log(data);
+                        $("#results-modal").modal("toggle");
+                        $("#userName").val("");
+                        $("#photoURL").val("");
+                        $("#question1").val("");
+                        $("#question2").val("Make a Selection");
+                        $("#question3").val("Make a Selection");
+                        $("#question4").val("Make a Selection");
+                        $("#question5").val("Make a Selection");
+                        $("#question6").val("Make a Selection");
+                        $("#question7").val("Make a Selection");
+                        $("#question8").val("Make a Selection");
+                        $("#question9").val("Make a Selection");
+                        $("#question10").val("Make a Selection");
+                    }
+                    else {
+                        console.log("fail");
+                    }
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>
